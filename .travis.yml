@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - openjdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: XzEBUXzIu7mIYIbNtwTL4HbeJNROrKHzmPTP6cHmo+EJOsrPaWOaji8HXASb+0CHzBTc13zEn03O1tLvWFR/rqS4D/76IjL5TMJUQmtJ4C6LLGmGKpZkf6kLZ6QNz8wbYvPv9hgBbEiFmqG0t13YwOwnQpiKJTNKCwUKWWSxa7izipIHPgV3fEEUUPA/4OPRSWI6uvtPW+EfO8x7oHoClDkN9TosTbVt9Wr3F4sWpUUG9qaBr373XiO11yY8Btu9grsC6LOfQoRio+n9OjwSRsy6U5aVworlFEQkzSDFGX1nU+2R2oL2vcjVRSupiRsz46O6e8rSeCmQZqzaBE2jEo3+ADyH2mDzb+6Q+AQpl1sgdIn5kZaxwYCNkY4mzq3cP6yhuAGW0x+XXW6Y0vJanutB3xkPDv+5XbOkLAhbDEOcwKEEmnKtVnfathFUoBnEHkvpwujeeiF26uPsJ0a4JhR2xZGWzjQTPEIVSppxvvYXITxPY8A6rkrt3FcfaJBViw5Ql8k/iEwJIc5+xsRRAOw+q1IGaS41yEYWl8r9WGWYshP2nORGd7oVgqT5D+4WNY8bEx7lL3Vsu5o2JjRbA3osxKfN5brH7+5rpqxL0cRJFj8IXvKVgDvL5QQojmsscJkS2IA/BNuws45ZWGinU7LaNg59MZpOcITDpKGtKjQ=
+  app: soulradio
+  on:
+    repo: alakijaayo/SoulRadio
