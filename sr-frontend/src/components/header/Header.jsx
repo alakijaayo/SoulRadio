@@ -1,23 +1,29 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import useStyles from './Header.style'
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
+import useStyles from './Header.style';
 
 export default function Header() {
     const styles = useStyles();
 
     return (
         <div className={styles.root}>
-            <AppBar>
-                <Toolbar>
+            <AppBar position="static">
+                <Toolbar className={styles.toolbar}>
                     <Typography
+                        className={styles.title}
                         variant="h6"
-                        component="h1"
                         noWrap
                     >
                         SoulRadio
                     </Typography>
+                    <Button
+                        color="inherit"
+                        variant="outlined"
+                    >
+                        Login
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>
-    )
+    );
 }

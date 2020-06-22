@@ -4,6 +4,11 @@ export default makeStyles(() => ({
     root: {
         height: '100%',
         display: 'flex',
-        flexDirection: 'column',
+    },
+    toolbar: {
+        display: 'flex',
+    },
+    title: {
+        flexGrow: 1
     }
-}))
+}));
