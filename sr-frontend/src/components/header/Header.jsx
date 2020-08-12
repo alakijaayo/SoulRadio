@@ -19,6 +19,7 @@ export default function Header() {
                     <Button
                         color="inherit"
                         variant="outlined"
+                        onClick={() => fetch('/login')}
                     >
                         Login
                     </Button>
