@@ -7,6 +7,7 @@ import com.wrapper.spotify.SpotifyHttpManager;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.RedirectView;
 
+
 @Component
 public class LoginClient {
 

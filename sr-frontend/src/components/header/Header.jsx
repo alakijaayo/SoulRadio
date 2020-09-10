@@ -19,7 +19,7 @@ export default function Header() {
                     <Button
                         color="inherit"
                         variant="outlined"
-                        onClick={() => fetch('/login')}
+                        href="http://localhost:8080/login"
                     >
                         Login
                     </Button>
