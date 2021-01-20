@@ -19,12 +19,14 @@ import soulradio.soulradio.Client.LoginClient;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class SpotifyController {
+    String appVersion;
     
     @Autowired
     LoginClient loginClient;
      
     @GetMapping("/login")
-    public RedirectView login() {
+    public RedirectView login(@RequestParam String version) {
+        appVersion = version;
         return new RedirectView(loginClient.userLogin());
     }
 
@@ -41,7 +43,8 @@ public class SpotifyController {
         } catch (IOException | SpotifyWebApiException | ParseException e) {
             System.out.println("Error: " + e.getMessage());
         }
-       return new RedirectView("http://localhost:8080/#");
+        String page = appVersion == "production" ? "https://soulradio.herokuapp.com/?userLoggedIn=true" : "http://localhost:3000/userLoggedIn=true";
+       return new RedirectView(page);
     }
 
 }

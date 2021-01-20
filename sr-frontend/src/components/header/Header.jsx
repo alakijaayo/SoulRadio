@@ -4,7 +4,7 @@ import useStyles from './Header.style';
 
 export default function Header() {
     const styles = useStyles();
-    const host = process.env.NODE_ENV === 'production' ? "https://soulradio.herokuapp.com/login" : "http://localhost:8080/login"
+    const host = process.env.NODE_ENV === 'production' ? "https://soulradio.herokuapp.com/login?version=production" : "http://localhost:8080/login?version=development"
 
     return (
         <div className={styles.root}>
