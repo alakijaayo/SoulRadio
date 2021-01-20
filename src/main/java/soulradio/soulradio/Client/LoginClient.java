@@ -5,7 +5,6 @@ import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.requests.authorization.authorization_code.AuthorizationCodeUriRequest;
 import com.wrapper.spotify.SpotifyHttpManager;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.view.RedirectView;
 
 
 @Component
@@ -25,8 +24,13 @@ public class LoginClient {
         .show_dialog(true)
         .build();
 
-    public RedirectView userLogin() {
-        return new RedirectView(authorizationCodeUriRequest.execute().toString());
+    public String userLogin() {
+        System.out.println(spotifyAPI);
+        return authorizationCodeUriRequest.execute().toString();
+    }
+
+    public SpotifyApi api() {
+        return spotifyAPI;
     }
 
 }
