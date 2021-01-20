@@ -25,7 +25,6 @@ public class LoginClient {
         .build();
 
     public String userLogin() {
-        System.out.println(spotifyAPI);
         return authorizationCodeUriRequest.execute().toString();
     }
 

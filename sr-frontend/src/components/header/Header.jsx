@@ -4,6 +4,7 @@ import useStyles from './Header.style';
 
 export default function Header() {
     const styles = useStyles();
+    const host = process.env.NODE_ENV === 'production' ? "https://soulradio.herokuapp.com/login" : "http://localhost:8080/login"
 
     return (
         <div className={styles.root}>
@@ -19,7 +20,7 @@ export default function Header() {
                     <Button
                         color="inherit"
                         variant="outlined"
-                        href="http://localhost:8080/login"
+                        href={host}
                     >
                         Login
                     </Button>
