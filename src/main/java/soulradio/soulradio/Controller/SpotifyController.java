@@ -45,7 +45,7 @@ public class SpotifyController {
             System.out.println("Error: " + e.getMessage());
         }
         String application = choice.getAppVersion();
-        String host = application == "production" ? "https://soulradio.herokuapp.com/?userLoggedIn=true" : "http://localhost:3000/?userLoggedIn=true";
+        String host = application.equals("production") ? "https://soulradio.herokuapp.com/?userLoggedIn=true" : "http://localhost:3000/?userLoggedIn=true";
        return new RedirectView(host);
     }
 
