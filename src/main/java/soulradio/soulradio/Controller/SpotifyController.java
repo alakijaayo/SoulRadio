@@ -14,19 +14,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
+import soulradio.soulradio.Classes.Version;
 import soulradio.soulradio.Client.LoginClient;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class SpotifyController {
-    String appVersion;
+    Version choice = new Version("production");
     
     @Autowired
     LoginClient loginClient;
      
     @GetMapping("/login")
     public RedirectView login(@RequestParam String version) {
-        appVersion = version;
+        choice.setAppVersion(version);
         return new RedirectView(loginClient.userLogin());
     }
 
@@ -43,8 +44,9 @@ public class SpotifyController {
         } catch (IOException | SpotifyWebApiException | ParseException e) {
             System.out.println("Error: " + e.getMessage());
         }
-        String page = appVersion == "production" ? "https://soulradio.herokuapp.com/?userLoggedIn=true" : "http://localhost:3000/userLoggedIn=true";
-       return new RedirectView(page);
+        String application = choice.getAppVersion();
+        String host = application == "production" ? "https://soulradio.herokuapp.com/?userLoggedIn=true" : "http://localhost:3000/?userLoggedIn=true";
+       return new RedirectView(host);
     }
 
 }
