@@ -6,8 +6,8 @@ function Header() {
     const styles = useStyles();
     const loginHost = process.env.NODE_ENV === 'production' ? "https://soulradio.herokuapp.com/login?version=production" : "http://localhost:8080/login?version=development";
     const logoutHost = process.env.NODE_ENV === 'production' ? "https://soulradio.herokuapp.com" : "http://localhost:3000";
-    const practice = window.location.search;
-    const params = new URLSearchParams(practice);
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
     const loggedIn = params.get('userLoggedIn')
 
     if (loggedIn === "true") {
