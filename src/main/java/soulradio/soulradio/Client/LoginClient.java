@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginClient {
 
-    private final URI redirectUri = SpotifyHttpManager.makeUri("https://soulradio.herokuapp.com/callback");
+    private final URI redirectUri = SpotifyHttpManager.makeUri("http://localhost:8080/callback");
 
     private final SpotifyApi spotifyAPI = new SpotifyApi.Builder()
         .setClientId("c87dfb42b9b643ee9dfb14cc00d2d0aa")
