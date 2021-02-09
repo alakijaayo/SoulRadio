@@ -4,6 +4,7 @@ import useStyles from './FrontPage.style';
 
 function FrontPage(props) {
    const loggedIn = props.loggedIn;
+   const userName = props.userName;
    const classes = useStyles();
 
     if (loggedIn !== "true") {
@@ -50,7 +51,7 @@ function FrontPage(props) {
                 </Typography>
             </Card>
             <Typography>
-                Welcome Ayodele
+                Welcome {userName}
             </Typography>
         </div>
     )
