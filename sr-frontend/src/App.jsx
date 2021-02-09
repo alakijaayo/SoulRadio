@@ -10,8 +10,6 @@ function App() {
     const loggedIn = info[0].replace("userLoggedIn=", "");
     const userName = info[1];
 
-    console.log(userName);
-
     return (
         <div className="App">
             <Header
