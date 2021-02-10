@@ -1,8 +1,7 @@
 import React from 'react';
-import { Typography, Card } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import useStyles from './FrontPage.style';
 import SearchSongs from '../SearchSongs/SearchSongs';
-import Chat from '../Chat/Chat';
 import Queue from '../Queue/Queue';
 import NowPlaying from '../NowPlaying/NowPlaying';
 
@@ -38,7 +37,6 @@ function FrontPage(props) {
             <NowPlaying
                 username= {userName}
             />
-            {/* <Chat /> */}
             <Queue />
         </div>
     )

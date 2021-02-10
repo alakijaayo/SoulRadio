@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, Button, TextField } from '@material-ui/core';
+import { Card, Button, TextField } from '@material-ui/core';
 import useStyles from './SearchSongs.style';
 
 function SearchSongs() {

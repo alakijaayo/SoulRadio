@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import useStyles from './Chat.style';
 
 function Chat() {
