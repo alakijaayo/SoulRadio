@@ -52,7 +52,7 @@ public class SpotifyController {
         String application = choice.getAppVersion();
         String encode = "userLoggedIn=true/" + user.getDisplayName();
         String encodedString = Base64.getEncoder().encodeToString(encode.getBytes()); 
-        String host = application.equals("production") ? "https://soulradio.herokuapp.com/" + encodedString : "http://localhost:3000/" + encodedString;
+        String host = application.equals("production") ? "https://soulradio.herokuapp.com/?" + encodedString : "http://localhost:3000/?" + encodedString;
        return new RedirectView(host);
     }
 

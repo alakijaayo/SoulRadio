@@ -1,8 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
-    root: {
-        display: 'flex',
-        position: 'absolute'
+    queueCard: {
+        height: 825,
+        width: 375
     }
 }));
+

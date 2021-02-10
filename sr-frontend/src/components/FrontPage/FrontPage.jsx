@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Card } from '@material-ui/core';
 import useStyles from './FrontPage.style';
+import SearchSongs from '../SearchSongs/SearchSongs';
+import Chat from '../Chat/Chat';
+import Queue from '../Queue/Queue';
+import NowPlaying from '../NowPlaying/NowPlaying';
 
 function FrontPage(props) {
    const loggedIn = props.loggedIn;
@@ -27,32 +31,15 @@ function FrontPage(props) {
     }
     
     return (
-        <div>
-            <Card
-                className={classes.chat}
-            >
-                <Typography>
-                    Chat
-                </Typography>
-            </Card>
-            <Card>
-                <Typography>
-                    Now Playing
-                </Typography>
-            </Card>
-            <Card>
-                <Typography>
-                    Search Song
-                </Typography>
-            </Card>
-            <Card>
-                <Typography>
-                    Queue
-                </Typography>
-            </Card>
-            <Typography>
-                Welcome {userName}
-            </Typography>
+        <div
+            className={classes.root}
+        >
+            <SearchSongs />
+            <NowPlaying
+                username= {userName}
+            />
+            {/* <Chat /> */}
+            <Queue />
         </div>
     )
 }
