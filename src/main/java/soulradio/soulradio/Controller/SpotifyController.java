@@ -25,7 +25,6 @@ public class SpotifyController {
     @GetMapping("/login")
     public RedirectView login(@RequestParam String version) {
         choice.setAppVersion(version);
-        System.out.println(choice.getAppVersion());
         return new RedirectView(spotifyClient.userLogin());
     }
 
